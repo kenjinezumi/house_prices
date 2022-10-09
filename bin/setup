@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Import functions from utils
+
+source bin/utils
+
+source ./setup
+if ! [[ "${LANG}" =~ "UTF-8" ]]; then
+  echo "Your configured LANG doesn't enforce UTF-8. Ensure you do this, or this repo will not work for you"
+  exit 1
+else
+  echo "Configured LANG enforces UTF-8"
+fi
+
+#Install the project
+install_project

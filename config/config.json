@@ -1,0 +1,8 @@
+{
+  "variables": {
+    "data_path": "data/",
+    "test_path": "data/test.csv",
+    "train_path": "data/train.csv",
+    "target_variable": "SalePrice"
+  }
+}

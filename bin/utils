@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+install_project(){
+  echo "Upgrading pip..."
+  pip install -U pip
+  echo "Installing Project..."
+  poetry config virtualenvs.in-project true
+  poetry env use 3.10.7
+
+  echo "Starting poetry install"
+  # Trigger install of dependencies
+  poetry install
+
+  # Enable pre-commit checks
+  poetry run pre-commit install
+}
+
+export create_venv
+export install_project
