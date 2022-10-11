@@ -17,4 +17,3 @@ install_project(){
 }
 
 export create_venv
-export install_project
